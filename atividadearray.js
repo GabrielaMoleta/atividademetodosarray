@@ -98,3 +98,32 @@ elementos dos arrays originais.
 criando um novo array newArray que contém todos os elementos de array seguidos por numeroIndividual.
 O console.log() é usado para exibir o conteúdo da variável newArray: [ 1, 2, 3, 4 ] 
 */
+
+//4ºSlice
+
+//Primeiro exemplo: Copiar uma parte de um array sem modificar o array de origem.
+colors = ['red', 'green', 'blue', 'pink'];
+rgb = colors.slice(0, 3);
+console.log(rgb);
+
+/*Primeiro declarei uma variável colors e atribui a ela um array com os valores 
+['red', 'green', 'blue', 'pink']
+O método slice() é usado para retornar uma parte do array, começando do índice inicial especificado até, 
+mas não incluindo, o índice final especificado. Nesse caso, estamos usando slice(0, 3), 
+o que significa que estamos criando um novo array chamado rgb que contém os elementos do colors do índice 0 
+até o índice 2 (o índice 3 não é incluído).
+Por último o console.log() é usado para exibir o conteúdo da variável rgb: [ 'red', 'green', 'blue' ]
+*/
+
+//Segundo exemplo: Obter os últimos três elementos do array anterior
+const sequencia = [10, 20, 30, 40, 50];
+const slicesNumeros = sequencia.slice(-3);
+console.log(slicesNumeros);
+
+/*Primeiro declarei uma constante sequencia e atribui a ela um array com os valores 
+[10, 20, 30, 40, 50].
+O método slice() é usado para retornar uma parte de um array, começando do índice especificado até o final do array. 
+Quando o índice é negativo, ele conta a partir do final do array. Neste caso, estamos usando slice(-3), o que significa 
+que estamos criando um novo array chamado slicesNumeros que contém os três últimos elementos de sequencia.
+Por último o console.log() é usado para exibir o conteúdo da variável slicesNumeros: [ 30, 40, 50 ]
+*/

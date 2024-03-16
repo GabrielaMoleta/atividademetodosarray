@@ -1,3 +1,7 @@
 //10 Metodos Array
-let a=2
-let b=1
+
+//1ºSort
+// Neste primeiro exemplo, o array frutas será ordenado alfabeticamente
+let frutas = ['banana', 'abacaxi', 'laranja', 'maçã'];
+frutas.sort();
+console.log(frutas);

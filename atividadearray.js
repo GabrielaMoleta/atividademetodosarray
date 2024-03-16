@@ -11,14 +11,14 @@ console.log(frutas);
  O método sort() é usado para ordenar os elementos de um array.
  Quando chamado sem argumentos, ele ordena os elementos do array em ordem alfabética crescente,
 o que significa que as strings são ordenadas de acordo com a ordem dos caracteres no padrão Unicode.
- Por último, o método console.log() é usado para exibir o array frutas.
+ Por último, o console.log() é usado para exibir o array frutas: [ 'abacaxi', 'banana', 'laranja', 'maçã' ]
 */
 
 
 // Segundo exemplo: o array numeros será ordenado de forma crescente. 
-let numeros = [10, 2, 15, 5]; 
-numeros.sort(function(a, b) {
-  return a - b;
+let numeros = [10, 2, 15, 5];
+numeros.sort(function (a, b) {
+    return a - b;
 });
 console.log(numeros);
 
@@ -30,7 +30,7 @@ a serem comparados.
  A função retorna um valor negativo se a deve vir antes de b, um 
 valor positivo se a deve vir depois de b, e 0 se eles são considerados iguais.
  A expressão a - b é uma forma simples de ordenar os números em ordem crescente.
- Por último o método console.log() é usado para exibir o array numeros.
+ Por último o console.log() é usado para exibir o array numeros: [ 2, 5, 10, 15 ]
  */
 
 
@@ -38,7 +38,7 @@ valor positivo se a deve vir depois de b, e 0 se eles são considerados iguais.
 //Primeiro exemplo: Unir elementos de um array em uma única string com o hífen
 numeros = [1, 2, 3, 4, 5];
 resultado = numeros.join("-");
-console.log(resultado); 
+console.log(resultado);
 
 /*Primeiro declarei uma variável numeros e atribui a ela um 
 array com os valores [1, 2, 3, 4, 5].
@@ -46,7 +46,7 @@ O método join() é usado para criar e retornar uma nova string concatenando tod
 Ele recebe um argumento opcional que especifica o separador a ser usado entre os elementos. 
 Nesse caso, usei o separador -. Portanto, o método join("-") vai juntar 
 os elementos do array numeros separados por - e atribuir essa nova string à variável resultado.
-Por último o método console.log() é usado para exibir o conteúdo da variável resultado.
+ Por último o console.log() é usado para exibir o conteúdo da variável resultado: 1-2-3-4-5
 */
 
 
@@ -61,4 +61,40 @@ O método join() é usado para criar e retornar uma nova string concatenando tod
  Ele recebe um argumento opcional que especifica o separador a ser usado entre os elementos, nesse caso, 
 usei o separador " ", que é um espaço em branco. Portanto, o método join(" ") vai juntar os elementos do array 
 palavras separados por um espaço em branco e atribuir essa nova string à variável resultado.
+Por último o console.log() é usado para exbir o conteúdo da variável resultado: Olá professor !
+*/
+
+
+//3ºConcat
+
+//Primeiro exemplo: Concatenar dois arrays, criando um novo array
+letras = ["a", "b", "c"];
+numeros = [1, 2, 3];
+
+const alfaNumerico = letras.concat(numeros);
+console.log(alfaNumerico);
+
+/*Primeiro declarei uma constante letras e atribui a ela um array com os valores 
+["a", "b", "c"]. Logo em seguida, Aqui, estamos declarei uma constante numeros 
+e atribuindo a ela um array com os valores [1, 2, 3].
+ O método concat() é usado para combinar dois ou mais arrays, criando um novo array que contém os elementos
+dos arrays originais. Nesse caso, estamos concatenando os arrays letras e numeros, criando um novo array chamado 
+alfaNumerico que contém todos os elementos de letras seguidos por todos os elementos de numeros.
+Por último, o método console.log() é usado para exibir o conteúdo da variável alfaNumerico, 
+resultando em [ 'a', 'b', 'c', 1, 2, 3 ] */
+
+
+//Segundo exemplo: Concatenar um array com um valor individual
+const array = [1, 2, 3];
+const numeroIndividual = 4;
+const newArray = array.concat(numeroIndividual);
+console.log(newArray); // Resultado: [1, 2, 3, 4]
+
+/*Primeiro declarei uma constante array e atribui a ela um array com os valores [1, 2, 3]. Logo após declarei
+uma constante numeroIndividual e atribui a ela o valor 4.
+ O método concat() é usado para combinar dois ou mais arrays, criando um novo array que contém os
+elementos dos arrays originais. 
+ Nesse caso, estamos concatenando o array array com o valor numeroIndividual, 
+criando um novo array newArray que contém todos os elementos de array seguidos por numeroIndividual.
+O console.log() é usado para exibir o conteúdo da variável newArray: [ 1, 2, 3, 4 ] 
 */

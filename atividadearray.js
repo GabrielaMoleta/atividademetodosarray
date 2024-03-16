@@ -127,3 +127,44 @@ Quando o índice é negativo, ele conta a partir do final do array. Neste caso, 
 que estamos criando um novo array chamado slicesNumeros que contém os três últimos elementos de sequencia.
 Por último o console.log() é usado para exibir o conteúdo da variável slicesNumeros: [ 30, 40, 50 ]
 */
+
+//5ºforEach
+
+//Primeiro exemplo: Executa uma função para cada elemento do array.
+const ordem = [1, 2, 3];
+ordem.forEach((element) => {
+    console.log(element);
+});
+
+/*Primeiro declarei uma constante ordem e atribuindo a ela um array com os valores [1, 2, 3].
+O método forEach() é usado para iterar sobre os elementos de um array e executar uma função de callback para cada elemento. 
+Neste caso, estamos chamando forEach() no array ordem e passando uma função de callback que recebe um parâmetro element, 
+que representa cada elemento do array. (Callback: permite passar uma função como argumento para outra função, que será 
+executada em um momento específico ou em resposta a um evento.)
+Dentro da função de callback, estamos usando o console.log() para exibir cada element no console. A cada iteração, o element
+será um dos elementos do array ordem:
+1
+2
+3
+*/
+
+//Segundo exemplo: Utilizando forEach para imprimir o plural de cada fruta
+const alimentos = ['maçã', 'banana', 'laranja'];
+
+alimentos.forEach(alimentos => {
+
+  console.log(alimentos + 's');
+
+});
+
+/*Primeiro declarei uma constante alimentos e atribui a ela um array
+ com os valores ['maçã', 'banana', 'laranja'].
+ O método forEach() é usado para iterar sobre os elementos de um array e executar uma função de callback para cada elemento. 
+ Neste caso, estamos chamando forEach() no array alimentos e passando uma função de callback que recebe um parâmetro alimento, 
+ que representa cada elemento do array.
+ Dentro da função de callback, estamos usando console.log() para exibir cada alimento seguido da letra 's'. A cada iteração, o 
+valor de alimento é uma das strings do array alimentos: 
+maçãs
+bananas
+laranjas
+ */

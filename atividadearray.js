@@ -168,3 +168,32 @@ maçãs
 bananas
 laranjas
  */
+
+
+//6º Filter
+
+//Primeiro exemplo:  Cria um novo array com todos os elementos que passam em um teste especificado por uma função.
+const sequen = [1, 2, 3, 4, 5];
+const sequenPares = sequen.filter(sequen => sequen % 2 === 0);
+console.log(sequenPares);
+
+/*Primeiro uma constante chamada sequen é criada e inicializada com um array contendo os números de 1 a 5.
+Logo após, outra constante chamada sequenPares é criada. O método filter é usado no array sequen para criar um novo array 
+contendo apenas os elementos pares. A função de callback sequen => sequen % 2 === 0 é usada para verificar se cada elemento é par. 
+Se o resto da divisão do elemento por 2 for igual a 0, ele é considerado par e incluído no novo array.
+Por fim, o resultado é impresso no console. O console exibirá [2, 4], que são os números pares do array original sequen.
+*/
+
+
+//Segundo exemplo: 
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+
+/*Primeiro uma constante chamada words é criada e inicializada com um array de strings contendo algumas palavras.
+ Logo após, outra constante chamada result é criada. O método filter é usado no array words para criar um novo array contendo
+apenas as palavras com mais de 6 caracteres. A função de callback (word) => word.length > 6 é usada para verificar se o 
+comprimento de cada palavra é maior que 6. Se for, a palavra é incluída no novo array.
+ Por fim, o resultado é impresso no console. O console exibirá ["exuberant", "destruction", "present"], que são as palavras do array 
+original words com mais de 6 caracteres.
+*/

@@ -1,7 +1,8 @@
-//10 Metodos Array
+//10 Métodos Array
 
 //1ºSort
-// Primeiro exemplo: o array frutas será ordenado alfabeticamente
+
+// Primeiro exemplo: O array frutas será ordenado alfabeticamente
 let frutas = ['banana', 'abacaxi', 'laranja', 'maçã'];
 frutas.sort();
 console.log(frutas);
@@ -15,7 +16,7 @@ o que significa que as strings são ordenadas de acordo com a ordem dos caracter
 */
 
 
-// Segundo exemplo: o array numeros será ordenado de forma crescente. 
+// Segundo exemplo: O array numeros será ordenado de forma crescente. 
 let numeros = [10, 2, 15, 5];
 numeros.sort(function (a, b) {
     return a - b;
@@ -35,6 +36,7 @@ valor positivo se a deve vir depois de b, e 0 se eles são considerados iguais.
 
 
 //2ºJoin
+
 //Primeiro exemplo: Unir elementos de um array em uma única string com o hífen
 numeros = [1, 2, 3, 4, 5];
 resultado = numeros.join("-");
@@ -313,3 +315,40 @@ Uma função de callback é passada para o every, que recebe um parâmetro e rep
 se o elemento for maior que zero e false caso contrário.
 Por fim, o resultado da verificação é impresso no console. O console exibirá true, pois todos os números no array original numbers2 são maiores que zero.
 */
+
+
+//Splice
+
+//Adicionando elementos usando splice:
+const fruit = ['apple', 'banana', 'cherry'];
+fruit.splice(2, 0, 'orange'); // Adiciona 'orange' na posição 2
+console.log(fruit); // Output: ['apple', 'banana', 'orange', 'cherry']
+
+/*Primeiro uma constante chamada fruit é criada e inicializada com um array contendo três frutas: 'apple', 'banana' e 'cherry'.
+O método splice é chamado no array fruit. Ele recebe três argumentos: o primeiro é a posição onde a modificação será feita 
+(2, neste caso, indicando a posição após 'banana'), o segundo é a quantidade de elementos a serem removidos (0, indicando que nenhum elemento será removido) 
+e o terceiro é o elemento a ser adicionado ('orange').
+Por último, o console exibirá ['apple', 'banana', 'orange', 'cherry'], pois 'orange' foi adicionado na posição 2, deslocando 'cherry' para a próxima posição.
+*/
+
+//Removendo elementos usando splice:
+const numbers3 = [1, 2, 3, 4, 5];
+numbers3.splice(2, 2); 
+console.log(numbers3); 
+
+/* Primeiro uma constante chamada numbers3 é criada e inicializada com um array contendo os números de 1 a 5.
+O método splice é usado no array numbers3. Ele remove 2 elementos a partir da posição 2 do array. Após essa operação, o array numbers3 ficará como [1, 2, 5], 
+pois os elementos 3 e 4 foram removidos.
+Por fim, o resultado após a remoção dos elementos é impresso no console. O console exibirá [1, 2, 5], que é o array resultante após a remoção dos elementos.
+*/
+
+//Substituindo elementos usando splice:
+const cor = ['red', 'green', 'blue'];
+cor.splice(1, 1, 'yellow');
+console.log(cor); 
+
+/*Primeiro uma constante chamada cor é criada e inicializada com um array contendo três strings representando cores.
+O método splice é chamado no array cor. Ele remove um elemento a partir da posição 1 (o segundo elemento, 'green') e, em seguida, insere 'yellow' nessa mesma posição.
+O array cor após a modificação é então impresso no console. O console exibirá ['red', 'yellow', 'blue'], que é o resultado após a substituição de 'green' por 'yellow' no array cor.
+*/
+

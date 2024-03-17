@@ -244,7 +244,7 @@ Por fim, o resultado da soma é impresso no console. O console exibirá 15, que 
 */
 
 
-//Segundo exemplo: 
+//Segundo exemplo: Encontrando o maior valor de um array
 const numbers = [10, 5, 8, 2, 15];
 
 const maiorValor = numbers.reduce((acumulador, elemento) => { return Math.max(acumulador, elemento); });
@@ -257,3 +257,35 @@ A função de callback (acumulador, elemento) => { return Math.max(acumulador, e
 acumulador atual e retornar o maior valor. O Math.max é usado para obter o maior valor entre o acumulador e o elemento atual.
 Por fim, o maior valor é impresso no console. O console exibirá 15, que é o maior valor no array original numbers.
 */
+
+
+//9º Some
+
+//Primeiro exemplo: Verifica se pelo menos um elemento do array satisfaz a condição especificada por uma função: pelo menos um elemnto tem que ser par.
+const number1 = [1, 2, 3, 4, 5];
+const temPar = number1.some(number1 => number1 % 2 === 0);
+console.log(temPar); 
+
+/*Primeiro uma constante chamada number1 é criada e inicializada com um array contendo os números de 1 a 5.
+Logo após, outra constante chamada temPar é criada. O método some é usado no array number1 para verificar se pelo menos um dos elementos é par.
+ A função de callback number1 => number1 % 2 === 0 é usada para verificar se o elemento é par (o resto da divisão por 2 é igual a 0).
+ Por fim, o resultado da verificação é impresso no console. O console exibirá true, indicando que há pelo menos um número par no array original number1.
+*/
+
+ //Segundo exemplo: verificar se algum dos elementos de um array de strings contém a letra 'a'
+
+ const comidas = ['banana', 'pequi', 'laranja', 'coco'];
+const temA = comidas.some(comidas => comidas.includes('a'));
+console.log(temA); // true
+
+/*Primeiro uma constante chamada palavras é criada e inicializada com um array de strings contendo algumas frutas.
+outra constante chamada temA é criada. O método some é usado no array palavras para verificar se pelo menos uma das palavras contém a letra 'a'. 
+A função de callback palavra => palavra.includes('a') é usada para verificar se a palavra contém a letra 'a', usando o método includes.
+Por fim, o resultado da verificação é impresso no console. O console exibirá true, pois tanto "banana" quanto "laranja" contêm a letra 'a'.
+*/
+
+
+
+
+
+

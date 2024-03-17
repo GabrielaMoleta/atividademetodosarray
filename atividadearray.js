@@ -172,7 +172,7 @@ laranjas
 
 //6º Filter
 
-//Primeiro exemplo:  Cria um novo array com todos os elementos que passam em um teste especificado por uma função.
+//Primeiro exemplo:  Cria um novo array com todos os elementos que passam em um teste de que os números precisam ser pares.
 const sequen = [1, 2, 3, 4, 5];
 const sequenPares = sequen.filter(sequen => sequen % 2 === 0);
 console.log(sequenPares);
@@ -185,7 +185,7 @@ Por fim, o resultado é impresso no console. O console exibirá [2, 4], que são
 */
 
 
-//Segundo exemplo: 
+//Segundo exemplo: Cria um novo array com todos os elementos que passaram no teste de que todas as palavras precisam ter 6 caracteres
 const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 const result = words.filter((word) => word.length > 6);
 console.log(result);
@@ -196,4 +196,34 @@ apenas as palavras com mais de 6 caracteres. A função de callback (word) => wo
 comprimento de cada palavra é maior que 6. Se for, a palavra é incluída no novo array.
  Por fim, o resultado é impresso no console. O console exibirá ["exuberant", "destruction", "present"], que são as palavras do array 
 original words com mais de 6 caracteres.
+*/
+
+
+//7º Map
+
+//Primeiro exemplo: Cria um novo array com o resultado de uma função para descobrir o quadrado de cada número.
+const n = [1, 2, 3];
+const quadrados = n.map(n => n ** 2);
+console.log(quadrados); 
+
+/*Primeiro uma constante chamada n é criada e inicializada com um array contendo os números 1, 2 e 3.
+Depois, outra constante chamada quadrados é criada. O método map é usado no array n para criar um novo array contendo os 
+quadrados de cada número. A função de callback n => n ** 2 é usada para elevar cada número ao quadrado.
+Por fim, o resultado é impresso no console. O console exibirá [1, 4, 9], que são os quadrados dos números do array original n.
+*/
+
+
+//Segundo exemplo: Converter Celsius em Fahrenheit.
+const temperaturasCelsius = [0, 10, 20, 30, 40];
+
+const temperaturasFahrenheit = temperaturasCelsius.map(celsius => (celsius * 9/5) + 32);
+
+console.log(temperaturasFahrenheit);
+
+/*Primeiro uma constante chamada temperaturasCelsius é criada e inicializada com um array contendo as temperaturas em graus Celsius.
+outra constante chamada temperaturasFahrenheit é criada. O método map é usado no array temperaturasCelsius para criar um novo array 
+contendo as temperaturas convertidas para Fahrenheit. A função de callback celsius => (celsius * 9/5) + 32 é usada para realizar a 
+conversão de cada temperatura de Celsius para Fahrenheit.
+ Por fim, o resultado é impresso no console. O console exibirá as temperaturas convertidas para Fahrenheit, correspondentes às
+temperaturas em Celsius do array original temperaturasCelsius: [ 32, 50, 68, 86, 104 ]
 */

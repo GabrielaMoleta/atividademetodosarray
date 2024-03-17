@@ -227,3 +227,33 @@ conversão de cada temperatura de Celsius para Fahrenheit.
  Por fim, o resultado é impresso no console. O console exibirá as temperaturas convertidas para Fahrenheit, correspondentes às
 temperaturas em Celsius do array original temperaturasCelsius: [ 32, 50, 68, 86, 104 ]
 */
+
+
+//8º Reduce
+
+//Primeiro exemplo: Somar todos os elementos de um array
+const nm = [1, 2, 3, 4, 5];
+const soma = nm.reduce((acumulador, nm) => acumulador + nm, 0);
+console.log(soma); 
+
+/*Primeiro uma constante chamada nm é criada e inicializada com um array contendo os números de 1 a 5.
+Depois outra constante chamada soma é criada. O método reduce é usado no array nm para somar todos os elementos do array. 
+A função de callback (acumulador, nm) => acumulador + nm é usada para somar o valor atual do acumulador com cada elemento do array, 
+iniciando com um valor inicial de acumulador de 0.
+Por fim, o resultado da soma é impresso no console. O console exibirá 15, que é a soma dos números do array original nm.
+*/
+
+
+//Segundo exemplo: 
+const numbers = [10, 5, 8, 2, 15];
+
+const maiorValor = numbers.reduce((acumulador, elemento) => { return Math.max(acumulador, elemento); });
+
+console.log(maiorValor); 
+
+/*Primeiro uma constante chamada numbers é criada e inicializada com um array contendo alguns números.
+Logo após outra constante chamada maiorValor é criada. O método reduce é usado no array numbers para encontrar o maior valor no array.
+A função de callback (acumulador, elemento) => { return Math.max(acumulador, elemento); } é usada para comparar cada elemento com o
+acumulador atual e retornar o maior valor. O Math.max é usado para obter o maior valor entre o acumulador e o elemento atual.
+Por fim, o maior valor é impresso no console. O console exibirá 15, que é o maior valor no array original numbers.
+*/

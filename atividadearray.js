@@ -285,7 +285,31 @@ Por fim, o resultado da verificação é impresso no console. O console exibirá
 */
 
 
+//10º Every
+
+//Primeiro exemplo: Verifica se todos os elementos do array são pares.
+const numeros1 = [1, 2, 3, 4, 5];
+const saoPares = numeros1.every(numero1 => numero1 % 2 === 0);
+console.log(saoPares); 
+
+/*Primeiro uma constante chamada numeros1 é criada e inicializada com um array contendo os números de 1 a 5.
+Depois, outra constante chamada saoPares é criada. O método every é usado no array numeros1 para verificar se todos os elementos são pares. 
+A função de callback numero1 => numero1 % 2 === 0 é usada para verificar se cada número é par (o resto da divisão por 2 é igual a 0).
+Por fim, o resultado da verificação é impresso no console. O console exibirá false, pois nem todos os números do array original numeros1 
+são pares (apenas o 2 e o 4 são pares).*/
 
 
+//Segundo exemplo: Verificar se cada elemento do array é maior que zero
+let numbers2 = [1, 3, 5];
+let resultad = numbers2.every(function (e) {
+  return e > 0;
+});
 
+console.log(resultad);
 
+/*Primeiro uma variável numbers2 é criada e inicializada com um array contendo os números 1, 3 e 5.
+Depois, outra variável resultad é criada. O método every é usado no array numbers2 para verificar se todos os elementos são maiores que zero. 
+Uma função de callback é passada para o every, que recebe um parâmetro e representando cada elemento do array. A função retorna true 
+se o elemento for maior que zero e false caso contrário.
+Por fim, o resultado da verificação é impresso no console. O console exibirá true, pois todos os números no array original numbers2 são maiores que zero.
+*/
